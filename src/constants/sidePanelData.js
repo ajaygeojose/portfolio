@@ -1,0 +1,45 @@
+import cv from "../assets/Ajay Geo Jose-Resume.pdf";
+export const contentList = ["+44 7426074724"];
+export const languages = [
+  "English (Fluent)",
+  "Malayalam (Fluent)",
+  "Tamil (Fluent)",
+  "Hindi (Intermediate)",
+];
+export const skills = [
+  { name: "React Js", rate: "4.5" },
+  { name: "JavaScript ES6+", rate: "4.5" },
+  { name: "HTML5", rate: "4" },
+  { name: "CSS / MUI", rate: "3.5" },
+  { name: "Redux", rate: "3.5" },
+  { name: "REST", rate: "3" },
+  { name: "GIT / Bitbucket", rate: "4" },
+  { name: "Docker", rate: "3" },
+  { name: "Dev-Tools / JIRA", rate: "3" },
+  { name: "Webpack / Vite", rate: "3" },
+  { name: "AWS", rate: "3" },
+  { name: "Jest", rate: "2" }
+];
+export const references = [
+  {
+    name: "Mr. Asif CH",
+    mail: "asifmusthafa@gmail.com",
+    company: "Riskcovry/CTO",
+  },
+  {
+    name: "Mr. Aneesh PS",
+    mail: "aneesh.ps@quest-global.com",
+    company: "Quest Global/Delivery Manager",
+  },
+  {
+    name: "Mr. Bibin George",
+    mail: "bibingeo@gmail.com",
+    company: "Ontash/Director Technical",
+  },
+];
+
+export const resume = {
+    fileUrl: cv,
+    type: "Download",
+    name: "Ajay Geo Jose-Resume.pdf",
+  };

@@ -1,0 +1,22 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+.footer{
+    display: flex;
+    padding:3px;
+    color:#ffffff;
+    background-color:#323B4C;
+    flex-direction:row;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+}
+.foot{
+    color:#ffffff;
+    align-content: center;
+    display: inline-block;
+
+}
+
+.foot:hover {
+    cursor: pointer;
+}

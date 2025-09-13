@@ -1,0 +1,14 @@
+.app{
+    position:relative;
+    height:100vh;
+}
+.header{
+  position: fixed;
+  top: 0;              /* Sticks to the top */
+  z-index: 1000;       /* Keeps it above other elements */
+  background: #fff;
+}
+.midLayer{
+ display:flex;
+ flex-direction: row;
+}

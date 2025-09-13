@@ -1,0 +1,22 @@
+.contentpanel{
+    padding: 10px;
+    color:#323B4C;
+    width:75rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position:"relative";
+    overflow: auto;
+}
+.hr {
+    display: block;
+    width: 100%;
+    border-top: 2px solid #014355;;
+    margin: 1em 0;
+    padding: 0;
+}
+.content{
+     text-align: justify;
+     color:#323B4C;
+     font-family: sans-serif;
+     font-size: 0.8rem;
+}
