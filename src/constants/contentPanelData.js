@@ -1,28 +1,14 @@
-// export const PROFILE = " Innovative and results-driven web developer with 6+ years of experience crafting high-performance, user-first applications across diverse industries. Expert in modern front-end technologies including React.js, JavaScript (ES6+), Redux, and responsive UI/UX design, with a sharp focus on accessibility and performance optimization. Adept at translating complex requirements into elegant, scalable solutions by leveraging tools like Plotly.js for data visualization, AWS for cloud deployment, and DevOps automation for streamlined delivery. Proven leadership in mentoring junior developers and collaborating cross-functionally to launch impactful digital experiences. Passionate about building intuitive interfaces and driving innovation through clean code, strategic thinking, and continuous learning.";
-// //   Innovative and results-driven web developer with 
-// //   <strong>6+ years of experience</strong> crafting high-performance apps. 
-// //   Expert in <strong>React.js</strong>, <strong>JavaScript (ES6+)</strong>, <strong>Redux</strong>.
-// // `;
-//   // export const PROFILE = `Innovative and results-driven web developer with 6+ years of experience crafting high-performance, user-first applications across diverse industries. Expert in modern front-end technologies including React.js, JavaScript (ES6+), Redux, and responsive UI/UX design, with a sharp focus on accessibility and performance optimization. Adept at translating complex requirements into elegant, scalable solutions by leveraging tools like Plotly.js for data visualization, AWS for cloud deployment, and DevOps automation for streamlined delivery. Proven leadership in mentoring junior developers and collaborating cross-functionally to launch impactful digital experiences. Passionate about building intuitive interfaces and driving innovation through clean code, strategic thinking, and continuous learning.`
-
-// export const keywords = [
-//   "6+ years of experience",
-//   "React.js",
-//   "JavaScript (ES6+)",
-//   "Redux",
-//   "Plotly.js",
-//   "AWS"
-// ];
-
-export const PROFILE = `Innovative and results-driven web developer with 6+ years of experience crafting high-performance, user-first applications across diverse industries. Expert in modern front-end technologies including React.js, JavaScript (ES6+), Redux, and responsive UI/UX design, with a sharp focus on accessibility and performance optimization. Adept at translating complex requirements into elegant, scalable solutions by leveraging tools like Plotly.js for data visualization, AWS for cloud deployment, and DevOps automation for streamlined delivery. Proven leadership in mentoring junior developers and collaborating cross-functionally to launch impactful digital experiences. Passionate about building intuitive interfaces and driving innovation through clean code, strategic thinking, and continuous learning.`
+export const PROFILE = `Innovative and results-driven web developer with 6+ years of experience crafting high-performance, user-first applications across diverse industries. Expert in modern front-end technologies including React.js, JavaScript (ES6+), Redux, and responsive UI/UX design, with a sharp focus on accessibility and performance optimization. Adept at translating complex requirements into elegant, scalable solutions by leveraging tools like Plotly.js for data visualization, AWS for cloud deployment, and DevOps automation for streamlined delivery. Proven leadership in mentoring junior developers and collaborating cross-functionally to launch impactful digital experiences. Passionate about building intuitive interfaces and driving innovation through clean code, strategic thinking, and continuous learning.`;
 
 export const keywords = [
   "6+ years of experience",
   "React.js",
   "JavaScript (ES6+)",
   "Redux",
+  "responsive UI/UX design",
+  "data visualization",
   "Plotly.js",
-  "AWS"
+  "AWS",
 ];
 export const EXPERIENCE = [
   {

@@ -1,5 +1,25 @@
 import cv from "../assets/Ajay Geo Jose-Resume.pdf";
-export const contentList = ["+44 7426074724"];
+export const contactItems = [
+  {
+    label: "+44 7426074724",
+    href: "tel:+447426074724", // tel: is better than href="#"
+  },
+  {
+    label: "Liverpool, UK",
+    href: "https://maps.app.goo.gl/kjgjs4LGnpA8tsUX9",
+    target: "_blank",
+  },
+  {
+    label: "Mail",
+    href: "mailto:ajaygeojose@gmail.com",
+    target: "_blank",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/ajay-geo-jose-189438170/",
+    target: "_blank",
+  },
+];
 export const languages = [
   "English (Fluent)",
   "Malayalam (Fluent)",

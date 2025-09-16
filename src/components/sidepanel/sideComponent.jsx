@@ -1,12 +1,11 @@
-import React from "react";
 import "./sidepanel.css";
-
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import { Button, Rating } from "@mui/material";
+import { Button, Rating, Tooltip } from "@mui/material";
+import { Link } from "@mui/material";
 
 const SideComponent = ({
   name,
@@ -25,7 +24,20 @@ const SideComponent = ({
       </AccordionSummary>
       <AccordionDetails>
         <Typography>
-          {name == "REREFENCES" ? (
+          {name == "CONTACT" ? (
+            sideItemList.map(({ label, href, target }, index) => (
+              <Link
+                key={index}
+                href={href}
+                target={target}
+                rel="noopener"
+                underline="none"
+                sx={{ display: "block", mb: 1 }} // optional styling
+              >
+                {label}
+              </Link>
+            ))
+          ) : name == "REREFENCES" ? (
             sideItemList.map((item) => (
               <div>
                 <h4>{item.name}</h4>
@@ -61,7 +73,9 @@ const SideComponent = ({
                       />
                     </>
                   ) : (
-                    item
+                    <Tooltip className="content" title={item.split(" ")[1]} placement="right">
+                      <Button>{item.split(" ")[0]}</Button>
+                    </Tooltip>
                   )}
                 </li>
               ))}
@@ -70,20 +84,6 @@ const SideComponent = ({
         </Typography>
       </AccordionDetails>
     </Accordion>
-
-    // <div id="name" className='content'>
-    //     <h3>{name}</h3>
-    //     <hr className="hr" />
-    // {(name=="REREFENCES")?sideItemList.map(item=><div>
-    //     <h4>{item.name}</h4>
-    //     <p>{item.company}</p>
-    //     <p>Email: {item.mail}</p>
-
-    // </div>):<ul style={{listStyleType:sideItemStyle?sideItemStyle:"none"}}>
-    //   {sideItemList.map(item=><li key={item} style={{paddingBottom:"3px"}}>{item}</li>)}
-    // </ul>}
-
-    // </div>
   );
 };
 
