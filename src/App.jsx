@@ -14,6 +14,7 @@ function App() {
   const navs=["Who a'm I","Career Objectives","Projects","Social Media"]
   const [open, setOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
+  const [isMobile,seIsMobile] = useState(false);
   const toggleDrawer = () => () => {
     setOpen((prev) => !prev);
   };
@@ -21,12 +22,17 @@ function App() {
       setWidth(window.innerWidth);
   }
   useEffect(() => {
-      window.addEventListener('resize', handleWindowSizeChange);
-      return () => {
-          window.removeEventListener('resize', handleWindowSizeChange);
-      }
+    if (width <= 768) {
+      seIsMobile(true);
+    } else {
+      seIsMobile(false);
+    }
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
   }, []);
-  const isMobile = width <= 768;
+ 
   const Ham=()=>{
     return(<Button onClick={toggleDrawer(true)}><MenuIcon/></Button>)
   }

@@ -43,19 +43,25 @@ export const skills = [
 export const references = [
   {
     name: "Mr. Asif CH",
-    mail: "asifmusthafa@gmail.com",
+    href: "mailto:asifmusthafa@gmail.com",
     company: "Riskcovry/CTO",
+    linkHref:"https://www.linkedin.com/in/asifmusthafa",
+    target: "_blank",
   },
   {
     name: "Mr. Aneesh PS",
-    mail: "aneesh.ps@quest-global.com",
+    href: "mailto:aneesh007@gmail.com",
     company: "Quest Global/Delivery Manager",
+    linkHref:"https://www.linkedin.com/in/aneeshps",
+    target: "_blank",
   },
   {
     name: "Mr. Bibin George",
-    mail: "bibingeo@gmail.com",
+    href: "mailto:bibigeo@gmail.com@gmail.com",
     company: "Ontash/Director Technical",
-  },
+    linkHref:"https://www.linkedin.com/in/bibigeo",
+    target: "_blank",
+  }
 ];
 
 export const resume = {

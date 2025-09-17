@@ -31,6 +31,7 @@ const Sidepanel = ({isMobile}) => {
         expanded={expanded === "CONTACT"}
       />
       <SideComponent
+        isMobile={isMobile}
         name="PROFICIENCIES"
         sideItemList={skills}
         sideItemStyle={"none"}
@@ -38,6 +39,7 @@ const Sidepanel = ({isMobile}) => {
         expanded={expanded === "PROFICIENCIES"}
       />
       <SideComponent
+        isMobile={isMobile}
         name="LANGUAGES"
         sideItemList={languages}
         sideItemStyle={"none"}
@@ -45,6 +47,7 @@ const Sidepanel = ({isMobile}) => {
         expanded={expanded === "LANGUAGES"}
       />
       <SideComponent
+        isMobile={isMobile}
         name="REREFENCES"
         sideItemList={references}
         sideItemStyle={"none"}

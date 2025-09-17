@@ -27,12 +27,23 @@ const SideComponent = ({
         <Typography component="span">{name}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>
           {name == "CONTACT" ? (
             <>
-              {isMobile?<span style={{display:"flex",alignItems: "center", gap: "8px"}}><InfoOutlineIcon /> <h6>click links to know more..</h6></span>:<Tooltip style={{float:"right"}} title="click links to know more.." placement="left">
-                <InfoOutlineIcon />
-              </Tooltip>}
+              {isMobile ? (
+                <span
+                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
+                >
+                  <InfoOutlineIcon /> <h6>click links to know more..</h6>
+                </span>
+              ) : (
+                <Tooltip
+                  style={{ float: "right" }}
+                  title="click links to know more.."
+                  placement="left"
+                >
+                  <InfoOutlineIcon />
+                </Tooltip>
+              )}
               {sideItemList.map(({ label, href, target }, index) => (
                 <Link
                   key={index}
@@ -48,16 +59,46 @@ const SideComponent = ({
             </>
           ) : name == "REREFENCES" ? (
             sideItemList.map((item, index) => (
-              <>
                 <div key={index} className="content">
                   <h5>{item.name}</h5>
                   <span>{item.company}</span>
-                  <p>
-                    Email: <a href={`mailto:${item.mail}`}>{item.mail}</a>
-                  </p>
+                  {!isMobile ? (
+                    <>
+                      <p>
+                        Email: <a href={`mailto:${item.mail}`}>{item.href}</a>
+                      </p>
+                      <p>
+                        LinkedIn:{" "}
+                        <a href={`mailto:${item.mail}`}>{item.linkHref}</a>
+                      </p>
+                    </>
+                  ) : (
+                    <div style={{display:"flex", flexDirection:"row", gap:"8px"}}>
+                      <Link
+                        key={index}
+                        href={item.href}
+                        target={item.target}
+                        rel="noopener"
+                        underline="none"
+                        sx={{ display: "block", mb: 1 }} // optional styling
+                      >
+                        Email
+                      </Link>
+                      /
+                      <Link
+                        key={index}
+                        href={item.LinkHref}
+                        target={item.target}
+                        rel="noopener"
+                        underline="none"
+                        sx={{ display: "block", mb: 1 }} // optional styling
+                      >
+                        LinkedIn
+                      </Link>
+                    </div>
+                  )}
+                  <hr />
                 </div>
-                <hr />
-              </>
             ))
           ) : name == "RESUME" ? (
             <div>
@@ -110,7 +151,6 @@ const SideComponent = ({
               ))}
             </ul>
           )}
-        </Typography>
       </AccordionDetails>
     </Accordion>
   );
