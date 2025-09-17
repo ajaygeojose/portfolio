@@ -2,10 +2,10 @@ import cv from "../assets/Ajay Geo Jose-Resume.pdf";
 export const contactItems = [
   {
     label: "+44 7426074724",
-    href: "tel:+447426074724", // tel: is better than href="#"
+    href: "tel:+447426074724",
   },
   {
-    label: "Liverpool, UK",
+    label: "Address",
     href: "https://maps.app.goo.gl/kjgjs4LGnpA8tsUX9",
     target: "_blank",
   },
@@ -21,10 +21,10 @@ export const contactItems = [
   },
 ];
 export const languages = [
-  "English (Fluent)",
-  "Malayalam (Fluent)",
-  "Tamil (Fluent)",
-  "Hindi (Intermediate)",
+  {name:"English",rate:"5" },
+  {name:"Malayalam",rate:"5" }, 
+  {name:"Tamil",rate:"3" }, 
+  {name:"Hindi",rate:"2" }, 
 ];
 export const skills = [
   { name: "React Js", rate: "4.5" },

@@ -6,15 +6,18 @@ import Typography from "@mui/material/Typography";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { Button, Rating, Tooltip } from "@mui/material";
 import { Link } from "@mui/material";
-
+import { useEffect, useState } from "react";
+import InfoOutlineIcon from "@mui/icons-material/InfoOutline";
 const SideComponent = ({
   name,
   sideItemList,
   sideItemStyle,
   onButtonClick,
+  expanded,
+  handleChange,
 }) => {
   return (
-    <Accordion>
+    <Accordion expanded={expanded} onChange={handleChange(name)}>
       <AccordionSummary
         expandIcon={<ArrowDownwardIcon />}
         aria-controls="panel1-content"
@@ -25,32 +28,45 @@ const SideComponent = ({
       <AccordionDetails>
         <Typography>
           {name == "CONTACT" ? (
-            sideItemList.map(({ label, href, target }, index) => (
-              <Link
-                key={index}
-                href={href}
-                target={target}
-                rel="noopener"
-                underline="none"
-                sx={{ display: "block", mb: 1 }} // optional styling
-              >
-                {label}
-              </Link>
-            ))
+            <>
+              <Tooltip title="click links to know more.." placement="right">
+                <InfoOutlineIcon />
+              </Tooltip>
+              {sideItemList.map(({ label, href, target }, index) => (
+                <Link
+                  key={index}
+                  href={href}
+                  target={target}
+                  rel="noopener"
+                  underline="none"
+                  sx={{ display: "block", mb: 1 }} // optional styling
+                >
+                  {label}
+                </Link>
+              ))}
+            </>
           ) : name == "REREFENCES" ? (
-            sideItemList.map((item) => (
-              <div>
-                <h4>{item.name}</h4>
-                <p>{item.company}</p>
-                <p>Email: {item.mail}</p>
-              </div>
+            sideItemList.map((item, index) => (
+              <>
+                <div key={index} className="content">
+                  <h5>{item.name}</h5>
+                  <span>{item.company}</span>
+                  <p>
+                    Email: <a href={`mailto:${item.mail}`}>{item.mail}</a>
+                  </p>
+                </div>
+                <hr />
+              </>
             ))
           ) : name == "RESUME" ? (
             <div>
               <Button
                 variant="contained"
-                color="success"
                 onClick={onButtonClick}
+                style={{
+                  borderRadius: 35,
+                  backgroundColor: "#323b4c",
+                }}
               >
                 {sideItemList.type}
               </Button>
@@ -59,8 +75,8 @@ const SideComponent = ({
             <ul
               style={{ listStyleType: sideItemStyle ? sideItemStyle : "none" }}
             >
-              {sideItemList.map((item) => (
-                <li key={item}>
+              {sideItemList.map((item, index) => (
+                <li key={index}>
                   {name === "PROFICIENCIES" ? (
                     <>
                       <Typography component="legend">{item.name}</Typography>
@@ -70,12 +86,24 @@ const SideComponent = ({
                         onChange={(event, newValue) => {
                           // setValue(newValue);
                         }}
+                        readOnly
                       />
                     </>
                   ) : (
-                    <Tooltip className="content" title={item.split(" ")[1]} placement="right">
-                      <Button>{item.split(" ")[0]}</Button>
-                    </Tooltip>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px",
+                      }}
+                    >
+                      <span>{item.name}</span>
+                      <Rating
+                        name="simple-controlled"
+                        value={item.rate}
+                        readOnly
+                      />
+                    </div>
                   )}
                 </li>
               ))}
