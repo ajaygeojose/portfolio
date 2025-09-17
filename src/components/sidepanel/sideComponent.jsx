@@ -15,6 +15,7 @@ const SideComponent = ({
   onButtonClick,
   expanded,
   handleChange,
+  isMobile,
 }) => {
   return (
     <Accordion expanded={expanded} onChange={handleChange(name)}>
@@ -29,9 +30,9 @@ const SideComponent = ({
         <Typography>
           {name == "CONTACT" ? (
             <>
-              <Tooltip title="click links to know more.." placement="right">
+              {isMobile?<span style={{display:"flex",alignItems: "center", gap: "8px"}}><InfoOutlineIcon /> <h6>click links to know more..</h6></span>:<Tooltip style={{float:"right"}} title="click links to know more.." placement="left">
                 <InfoOutlineIcon />
-              </Tooltip>
+              </Tooltip>}
               {sideItemList.map(({ label, href, target }, index) => (
                 <Link
                   key={index}

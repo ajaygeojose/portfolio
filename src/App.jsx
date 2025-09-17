@@ -42,9 +42,9 @@ function App() {
       <div className='midLayer'>
         {!isMobile && <Sidepanel/> }
         
-      <Drawer  open={open} onClose={toggleDrawer(false)}>
+      <Drawer open={open} onClose={toggleDrawer(false)}>
        <Close/>
-        <Sidepanel/>
+        <Sidepanel isMobile={isMobile}/>
       </Drawer>
 
         {/* <Sidepanel/> */}

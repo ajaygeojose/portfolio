@@ -9,7 +9,7 @@ import {
   skills,
 } from "../../constants/sidePanelData";
 
-const Sidepanel = () => {
+const Sidepanel = ({isMobile}) => {
   const onButtonClick = () => {
     let alink = document.createElement("a");
     alink.href = resume.fileUrl; // Webpack will resolve the correct URL
@@ -23,6 +23,7 @@ const Sidepanel = () => {
   return (
     <div className="sidepanel">
       <SideComponent
+        isMobile={isMobile}
         name="CONTACT"
         sideItemList={contactItems}
         sideItemStyle={"none"}
