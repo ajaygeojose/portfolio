@@ -75,7 +75,7 @@ const ContentPanel = () => {
                 >
                   {item.role} : {item.period}
                   <img
-                    style={{ height: "1.5rem", width: "4rem" }}
+                    style={{ height: "1.5rem", maxWidth: "7rem" }}
                     src={item.logo}
                   />
                 </Typography>
