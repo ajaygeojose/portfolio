@@ -1,3 +1,7 @@
-export const riskcovryLogo = "./src/assets/logos/Riskcovry-logo.png"
-export const questLogo = "./src/assets/logos/quest-global-logo.png";
-export const ontashLogo = "./src/assets/logos/Ontash-logo.png";
+import riskcovry from "./Riskcovry-logo.png";
+import quest from "./quest-global-logo.png";
+import ontash from "./Ontash-logo.png";
+
+export const riskcovryLogo = riskcovry;
+export const questLogo = quest;
+export const ontashLogo = ontash;
