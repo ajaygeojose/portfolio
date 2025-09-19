@@ -1,0 +1,37 @@
+<!-- Save as AGJ.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="400" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">AGJ logo</title>
+  <desc id="desc">Stylized AGJ initials inside a rounded square with gradient</desc>
+
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#6C63FF"></stop>
+      <stop offset="1" stop-color="#00C2FF"></stop>
+    </linearGradient>
+
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.18"></feDropShadow>
+    </filter>
+
+    <mask id="roundMask">
+      <rect x="0" y="0" width="200" height="200" rx="28" ry="28" fill="#fff"></rect>
+    </mask>
+  </defs>
+
+  <!-- Rounded background -->
+  <rect x="6" y="6" width="188" height="188" rx="28" ry="28" fill="url(#g1)" filter="url(#softShadow)"></rect>
+
+  <!-- Decorative overlapping shapes -->
+  <g mask="url(#roundMask)" opacity="0.12">
+    <circle cx="150" cy="40" r="50" fill="#fff"></circle>
+    <rect x="-20" y="90" width="120" height="80" rx="18" transform="rotate(-18 40 130)" fill="#ffffff"></rect>
+  </g>
+
+  <!-- Initials -->
+  <g font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <text x="50%" y="55%" font-size="72" letter-spacing="-2">AGJ</text>
+  </g>
+
+  <!-- Subtle inner stroke for definition -->
+  <rect x="6" y="6" width="188" height="188" rx="28" ry="28" fill="none" stroke="#ffffff" stroke-opacity="0.08"></rect>
+</svg>
