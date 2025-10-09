@@ -1,4 +1,6 @@
 import cv from "../assets/Ajay Geo Jose-Resume.pdf";
+import cvDoc from "../assets/Ajay_Geo_Jose.docx";
+
 export const contactItems = [
   {
     label: "+44 7426074724",
@@ -65,7 +67,7 @@ export const references = [
 ];
 
 export const resume = {
-    fileUrl: cv,
+    fileUrl: cvDoc,
     type: "Download",
-    name: "Ajay Geo Jose-Resume.pdf",
+    name: "Ajay_Geo_Jose-Resume.doc",
   };
