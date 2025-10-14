@@ -31,6 +31,7 @@ export const languages = [
 export const skills = [
   { name: "React Js", rate: "4.5" },
   { name: "JavaScript ES6+", rate: "4.5" },
+  { name: "TypeScript", rate: "2" },
   { name: "HTML5", rate: "4" },
   { name: "CSS / MUI", rate: "3.5" },
   { name: "Redux", rate: "3.5" },

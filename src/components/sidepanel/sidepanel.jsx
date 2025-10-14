@@ -16,7 +16,7 @@ const Sidepanel = ({isMobile}) => {
     alink.download = resume.name; // Set the file name for download
     alink.click();
   };
-  const [expanded, setExpanded] = useState("panel1");
+  const [expanded, setExpanded] = useState("CONTACT");
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };

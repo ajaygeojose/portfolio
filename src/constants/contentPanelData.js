@@ -18,6 +18,7 @@ export const EXPERIENCE = [
   {
     company: "Riskcovry",
     logo: riskcovryLogo,
+    url: "https://riskcovry.com/",
     period: "SEPT 2024 - MAY 2025",
     role: "Senior Front-End Developer - Riskcovry",
     details: [
@@ -34,6 +35,7 @@ export const EXPERIENCE = [
   {
     company: "Quest Global",
     logo: questLogo,
+    url: "https://www.questglobal.com/",
     period: "APRIL 2021 - SEPT 2024",
     role: "Senior Front-End Developer - Quest Global",
     details: [
@@ -47,17 +49,18 @@ export const EXPERIENCE = [
     show: false,
   },
   {
-  "company": "Ontash India Technologies, Calicut",
-  "logo": ontashLogo,
-  "period": "JUN 2017 - JUN 2019",
-  "role": "Front-End Developer - Ontash India Technologies",
-  "details": [
-    "Developed responsive UIs for healthcare applications such as DSH Eligibility Checker.",
-    "Contributed to UI development within Odoo ERP, enhancing usability and workflows.",
-    "Built and maintained company websites including ontash.net, qualityreimbursement.com, and stgeorgemedicalmission.org."
-  ],
-  "show": false
-}
+    company: "Ontash India Technologies, Calicut",
+    logo: ontashLogo,
+    url: "https://ontash.net/",
+    period: "JUN 2017 - JUN 2019",
+    role: "Front-End Developer - Ontash India Technologies",
+    details: [
+      "Developed responsive UIs for healthcare applications such as DSH Eligibility Checker.",
+      "Contributed to UI development within Odoo ERP, enhancing usability and workflows.",
+      "Built and maintained company websites including ontash.net, qualityreimbursement.com, and stgeorgemedicalmission.org.",
+    ],
+    show: false,
+  },
 ];
 
 export const PROJECTS = [

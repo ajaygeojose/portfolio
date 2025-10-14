@@ -74,10 +74,12 @@ const ContentPanel = () => {
                   }}
                 >
                   {item.role} : {item.period}
-                  <img
+                  <a href={item.url} target="_blank">
+                    <img
                     style={{ height: "1.5rem", maxWidth: "7rem" }}
                     src={item.logo}
                   />
+                  </a>
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
